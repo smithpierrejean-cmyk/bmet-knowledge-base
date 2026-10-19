@@ -10,5 +10,23 @@
     "page_number": 15,
     "section": "Network Security and Isolation",
     "text": "Monitors should only be connected to networks explicitly intended for patient monitoring. Facilities must implement network traffic isolation using dedicated physical or logical networks (isolated VLANs) and firewalls to limit remote access."
+  },
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page_number": 92,
+    "section": "ECG Lead Faults",
+    "text": "ECG Leads Off / Lead Malfunction: Check electrode skin contact, ensure lead wires are securely plugged into the measurement block, and verify cable integrity. Replace dry or expired electrodes if necessary."
+  },
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page_number": 110,
+    "section": "NBP (Non-Invasive Blood Pressure) Calibration",
+    "text": "NBP Pneumatic Leak: Perform a leak test using the maintenance menu. Check cuffs, tubing connections, and internal pneumatic valves for cracks or loose fittings."
+  },
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page_number": 145,
+    "section": "Battery and Power Management",
+    "text": "Battery Low / Failure INOP: If the smart battery fails to charge or shows capacity errors, check contacts, verify AC power input, and run a battery calibration cycle. Replace lithium-ion battery packs that fail capacity thresholds."
   }
 ]
