@@ -1,4 +1,3 @@
-
 import streamlit as st
 import json
 import re
@@ -7,7 +6,7 @@ from rank_bm25 import BM25Okapi
 st.set_page_config(page_title="BMET Knowledge-Base Prototype (V1)", layout="wide")
 
 def tokenize(text):
-    return re.findall(r'\b\d+[\w/]*\b|[a-zA-Z]+', text.lower())
+    return re.findall(r'\b\w+\b', text.lower())
 
 @st.cache_resource
 def load_engine():
@@ -23,7 +22,7 @@ index, bm25 = load_engine()
 st.title("🔧 BMET Knowledge-Base Assistant (V1)")
 st.markdown("Query the Philips IntelliVue technical manual with strict source grounding and exact page citations.")
 
-query = st.text_input("Enter your BMET troubleshooting or maintenance query:", "How do I resolve SpO2 Sensor Malf?")
+query = st.text_input("Enter your BMET troubleshooting or maintenance query:", "SpO2")
 
 if st.button("Search & Generate"):
     if not query.strip():
@@ -53,3 +52,4 @@ if st.button("Search & Generate"):
                 with st.expander(f"Page {tc['page_number']} — Section: {tc['section']}", expanded=True):
                     st.write(tc['text'])
                     st.caption(f"Source Document ID: `{tc['doc_id']}` | Page `{tc['page_number']}`")
+
