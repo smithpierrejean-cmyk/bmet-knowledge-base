@@ -1,44 +1,30 @@
-import streamlit as st
-import json
+def search_index(query, index):
+    query_lower = query.lower().strip()
+    words = [w for w in query_lower.split() if w not in ["error", "errors", "issue", "fault", "problem"]]
+    
+    if not words:
+        words = query_lower.split()
 
-st.set_page_config(page_title="BMET Knowledge-Base Prototype (V1)", layout="wide")
+    scored_results = []
 
-@st.cache_resource
-def load_index():
-    with open("bmet_v1_index.json", "r", encoding="utf-8") as f:
-        return json.load(f)
-
-index = load_index()
-
-st.title("🔧 BMET Knowledge-Base Assistant (V1)")
-st.markdown("Query the Philips IntelliVue technical manual with strict source grounding and exact page citations.")
-
-query = st.text_input("Enter your BMET troubleshooting or maintenance query:", "ECG")
-
-if st.button("Search & Generate"):
-    if not query.strip():
-        st.warning("Please enter a valid query.")
-    else:
-        # Convert both query words AND the text to lowercase for reliable matching
-        query_words = [w.lower() for w in query.split()]
-        top_chunks = []
+    for item in index:
+        text_content = (item["section"] + " " + item["text"]).lower()
+        score = 0
         
-        for chunk in index:
-            text_lower = chunk['text'].lower()
-            section_lower = chunk['section'].lower()
-            combined_text = text_lower + " " + section_lower
+        # Exact full phrase match gets the highest priority score
+        if query_lower in text_content:
+            score += 10
             
-            if any(word in combined_text for word in query_words):
-                top_chunks.append(chunk)
-                if len(top_chunks) >= 3:
-                    break
-        
-        if not top_chunks:
-            st.error("The provided document does not state an answer to this query.")
-        else:
-            st.success(f"Retrieved {len(top_chunks)} relevant source sections.")
-            st.markdown("### 📋 Retrieved Source Context & Citations")
-            for tc in top_chunks:
-                with st.expander(f"Page {tc['page_number']} — Section: {tc['section']}", expanded=True):
-                    st.write(tc['text'])
-                    st.caption(f"Source Document ID: `{tc['doc_id']}` | Page `{tc['page_number']}`")
+        # Match primary keywords (like 'spo2', 'battery', 'ecg', 'nbp')
+        for word in words:
+            if word in text_content:
+                score += 3
+                
+        if score > 0:
+            scored_results.append((score, item))
+            
+    # Sort by highest score first
+    scored_results.sort(key=lambda x: x[0], reverse=True)
+    
+    # Return top matching items only
+    return [item for score, item in scored_results]
