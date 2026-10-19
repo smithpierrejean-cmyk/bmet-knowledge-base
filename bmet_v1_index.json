@@ -30,3 +30,9 @@
     "text": "Battery Low / Failure INOP: If the smart battery fails to charge or shows capacity errors, check contacts, verify AC power input, and run a battery calibration cycle. Replace lithium-ion battery packs that fail capacity thresholds."
   }
 ]
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page": 45,
+    "section": "Alarm Limits & Physiological Alarms",
+    "text": "Alarm Limits Configuration: High and low alarm limits can be customized per parameter (ECG, SpO2, NBP). To adjust alarm thresholds, select the parameter numeric, enter the Alarm Setup menu, and adjust the High Limit / Low Limit bounds. Ensure alarm volumes are set to audible levels according to hospital policy."
+  }
