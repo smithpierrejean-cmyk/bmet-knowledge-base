@@ -1,46 +1,38 @@
 [
   {
     "doc_id": "philips_intellivue_v1",
-    "page_number": 83,
-    "section": "SpO2 Troubleshooting",
-    "text": "SpO2 Sensor Malf: Try another adapter cable and sensor. If the INOP persists, contact your service personnel."
-  },
-  {
-    "doc_id": "philips_intellivue_v1",
-    "page_number": 15,
+    "page": 15,
     "section": "Network Security and Isolation",
     "text": "Monitors should only be connected to networks explicitly intended for patient monitoring. Facilities must implement network traffic isolation using dedicated physical or logical networks (isolated VLANs) and firewalls to limit remote access."
   },
   {
     "doc_id": "philips_intellivue_v1",
-    "page_number": 92,
+    "page": 92,
     "section": "ECG Lead Faults",
-    "text": "ECG Leads Off / Lead Malfunction: Check electrode skin contact, ensure lead wires are securely plugged into the measurement block, and verify cable integrity. Replace dry or expired electrodes if necessary."
+    "text": "ECG Leads Off / Lead Malfunction: Check electrode skin contact, lead wire integrity, and ensure proper cable snap connections to the trunk cable."
   },
   {
     "doc_id": "philips_intellivue_v1",
-    "page_number": 110,
-    "section": "NBP (Non-Invasive Blood Pressure) Calibration",
-    "text": "NBP Pneumatic Leak: Perform a leak test using the maintenance menu. Check cuffs, tubing connections, and internal pneumatic valves for cracks or loose fittings."
+    "page": 110,
+    "section": "NBP Calibration and Leaks",
+    "text": "NBP Pneumatic Leak: Perform a leak test using a test lung. Inspect cuff tubing, connectors, and internal pneumatic valves for cracks or loose fittings."
   },
   {
     "doc_id": "philips_intellivue_v1",
-    "page_number": 145,
+    "page": 145,
     "section": "Battery and Power Management",
     "text": "Battery Low / Failure INOP: If the smart battery fails to charge or shows capacity errors, check contacts, verify AC power input, and run a battery calibration cycle. Replace lithium-ion battery packs that fail capacity thresholds."
   },
-[  
   {
     "doc_id": "philips_intellivue_v1",
     "page": 83,
     "section": "SpO2 Troubleshooting",
-    "text": "..."
-  },   <--- MAKE SURE THIS COMMA IS HERE
+    "text": "SpO2 Sensor Malf: Try another adapter cable and sensor. If the INOP persists, contact your service personnel."
+  },
   {
     "doc_id": "philips_intellivue_v1",
     "page": 45,
     "section": "Alarm Limits & Physiological Alarms",
-    "text": "..."
+    "text": "Alarm Limits Configuration: High and low alarm limits can be customized per parameter (ECG, SpO2, NBP). To adjust alarm thresholds, select the parameter numeric, enter the Alarm Setup menu, and adjust the High Limit / Low Limit bounds. Ensure alarm volumes are set to audible levels according to hospital policy."
   }
 ]
-
