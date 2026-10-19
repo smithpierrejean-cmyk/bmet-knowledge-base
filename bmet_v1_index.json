@@ -1,0 +1,14 @@
+[
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page_number": 83,
+    "section": "SpO2 Troubleshooting",
+    "text": "SpO2 Sensor Malf: Try another adapter cable and sensor. If the INOP persists, contact your service personnel."
+  },
+  {
+    "doc_id": "philips_intellivue_v1",
+    "page_number": 15,
+    "section": "Network Security and Isolation",
+    "text": "Monitors should only be connected to networks explicitly intended for patient monitoring. Facilities must implement network traffic isolation using dedicated physical or logical networks (isolated VLANs) and firewalls to limit remote access."
+  }
+]
