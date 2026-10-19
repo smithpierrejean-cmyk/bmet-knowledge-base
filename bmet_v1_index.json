@@ -36,3 +36,4 @@
     "section": "Alarm Limits & Physiological Alarms",
     "text": "Alarm Limits Configuration: High and low alarm limits can be customized per parameter (ECG, SpO2, NBP). To adjust alarm thresholds, select the parameter numeric, enter the Alarm Setup menu, and adjust the High Limit / Low Limit bounds. Ensure alarm volumes are set to audible levels according to hospital policy."
   }
+]
