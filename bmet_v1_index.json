@@ -35,7 +35,7 @@
     "page": 83,
     "section": "SpO2 Troubleshooting",
     "text": "..."
-  },    <--- MAKE SURE THIS COMMA IS HERE
+  },   <--- MAKE SURE THIS COMMA IS HERE
   {
     "doc_id": "philips_intellivue_v1",
     "page": 45,
